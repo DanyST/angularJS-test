@@ -4,5 +4,6 @@
 angular.module('marketApp', [
   'ngRoute',
   'marketList',
+  'marketDetail',
   'navBar'
 ]);

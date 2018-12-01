@@ -5,8 +5,12 @@ angular.
     module('marketList').
     component('marketList', {
         templateUrl: 'market-list/market-list.template.html',
-        controller: ['$http', function MarketListController($http) {
-            this.orderProp = '-Volume';            
+        controller: ['$http', '$location', function MarketListController($http, $location) {
+            this.orderProp = '-Volume';    
+            this.showMarketDetail = function(marketName) {
+                console.log(marketName);
+                $location.path('/markets/' + marketName);
+            }
 
             var self = this;
             $http.get("https://bittrex.com/api/v1.1/public/getmarketsummaries").then(function(response) {

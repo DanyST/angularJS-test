@@ -5,16 +5,22 @@
         <title>Market App</title>
         <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="nav-bar/nav-bar.style.css">
+        <link rel="stylesheet" href="market-list/market-list.style.css">
         <script src="lib/angular/angular.js"></script>
         <script src="lib/angular-route/angular-route.js"></script>
         <script src="app.module.js"></script>
+        <script src="app.config.js"></script>
         <script src="nav-bar/nav-bar.module.js"></script>
         <script src="nav-bar/nav-bar.component.js"></script>
         <script src="market-list/market-list.module.js"></script>
         <script src="market-list/market-list.component.js"></script>
+        <script src="market-detail/market-detail.module.js"></script>
+        <script src="market-detail/market-detail.component.js"></script>
+
     </head>
     <body>
-        <nav-bar></nav-bar>
-        <market-list></market-list>
+        <nav-bar></nav-bar> 
+        
+        <section ng-view></section>
     </body>
 </html>

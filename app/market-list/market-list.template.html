@@ -31,7 +31,7 @@
             </div>                               
         </div>
         <div class="col-12">
-            <h4>{{ $ctrl.limit }} markets records of {{ $ctrl.markets.length }}</h4>
+            <h4>{{ $ctrl.limit }} markets of {{ $ctrl.markets.length }} records</h4>
             <hr></hr>
         </div>
         <div class="col-12">
@@ -74,7 +74,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="market in $ctrl.markets | filter: $ctrl.query  | orderBy: $ctrl.orderProp | limitTo: $ctrl.limit">
+                    <tr ng-repeat="market in $ctrl.markets | filter: $ctrl.query  | orderBy: $ctrl.orderProp | limitTo: $ctrl.limit" ng-click="$ctrl.showMarketDetail(market.MarketName)" >
                         <td>
                             {{ market.MarketName }}
                         </td>
@@ -82,10 +82,10 @@
                             {{ market.High }}
                         </td>
                         <td>
-                            {{ market.Low }}
+                            {{ market.Low | number: 7 }}
                         </td>
                         <td>
-                            {{ market.Volume }}
+                            {{ market.Volume | number: 2 }}
                         </td>
                         <td>
                             {{ market.Last }}
