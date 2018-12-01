@@ -1,0 +1,101 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-md-6">
+                   <div class="form-group">
+                       <label for="limit">Type a markets quantity</label>
+                       <input type="text" ng-model="$ctrl.limit" class="form-control">
+                   </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="orderBy">Order by</label>
+                        <select name="orderBy" ng-model="$ctrl.orderProp" class="form-control">
+                            <option value="-Created">Newest</option>
+                            <option value="-Volume">Volume</option>
+                        </select>
+                    </div>
+                </div>
+            </div>                       
+        </div>
+        <div class="col-12">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            MarketName
+                        </th>
+                        <th>
+                            24HR High
+                        </th>
+                        <th>
+                            24HR Low                    
+                        </th>
+                        <th>
+                            Volume
+                        </th>
+                        <th>
+                            Last
+                        </th>               
+                        <th>
+                            Bid
+                        </th>
+                        <th>
+                            Ask
+                        </th>
+                        <th>
+                            Open Buy Orders
+                        </th>
+                        <th>
+                            Open Sell Orders
+                        </th>
+                        <th>
+                            Prev Day
+                        </th>
+                        <th>
+                            Added
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="market in $ctrl.markets | orderBy:$ctrl.orderProp | limitTo: $ctrl.limit">
+                        <td>
+                            {{ market.MarketName }}
+                        </td>
+                        <td>
+                            {{ market.High }}
+                        </td>
+                        <td>
+                            {{ market.Low }}
+                        </td>
+                        <td>
+                            {{ market.Volume }}
+                        </td>
+                        <td>
+                            {{ market.Last }}
+                        </td>               
+                        <td>
+                            {{ market.Bid }}
+                        </td>
+                        <td>
+                            {{ market.Ask }}
+                        </td>
+                        <td>
+                            {{ market.OpenBuyOrders }}
+                        </td>
+                        <td>
+                            {{ market.OpenSellOrders }}
+                        </td>
+                        <td>
+                            {{ market.PrevDay }}
+                        </td>
+                        <td>
+                            {{ market.Created | date : format : timezone}}
+                        </td>
+                    </tr>
+                </tbody>       
+            </table>
+        </div>
+    </div>
+</div>
