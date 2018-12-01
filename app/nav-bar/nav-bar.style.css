@@ -1,4 +1,8 @@
-.navbar-yellow {
-    background-color: #f9e43f !important;
-    border-color: #fde400;
+.navbar-blue {
+    background-color: #1773fd !important;
+    border-color: #1773fd;
+}
+
+.navbar-title {
+    color: #fffcfcb5 !important;
 }
