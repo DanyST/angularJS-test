@@ -53,7 +53,7 @@
                         <th>
                             Last
                         </th>               
-                        <th>
+                        <!-- <th>
                             Bid
                         </th>
                         <th>
@@ -67,7 +67,7 @@
                         </th>
                         <th>
                             Prev Day
-                        </th>
+                        </th> -->
                         <th>
                             Added
                         </th>
@@ -82,19 +82,19 @@
                             {{ market.High | scientificToDecimal }}
                         </td>
                         <td>
-                            {{ market.Low | number: 7 }}
+                            {{ market.Low | scientificToDecimal }}
                         </td>
                         <td>
-                            {{ market.Volume | number: 2 }}
+                            {{ market.Volume.toFixed(2) }}
                         </td>
                         <td>
-                            {{ market.Last }}
+                            {{ market.Last | scientificToDecimal }}
                         </td>               
-                        <td>
-                            {{ market.Bid }}
+                        <!-- <td>
+                            {{ market.Bid | scientificToDecimal}}
                         </td>
                         <td>
-                            {{ market.Ask }}
+                            {{ market.Ask | scientificToDecimal}}
                         </td>
                         <td>
                             {{ market.OpenBuyOrders }}
@@ -103,8 +103,8 @@
                             {{ market.OpenSellOrders }}
                         </td>
                         <td>
-                            {{ market.PrevDay }}
-                        </td>
+                            {{ market.PrevDay | scientificToDecimal}}
+                        </td> -->
                         <td>
                             {{ market.Created | date : format : timezone}}
                         </td>

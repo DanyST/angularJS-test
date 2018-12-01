@@ -1,1 +1,80 @@
-<div></div>
+<div class="container">
+    <h1>{{ $ctrl.market.MarketName }}</h1>
+    <h4>Last 24 hour summary</h4>
+    <div class="row">
+        <div class="col-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <i class="glyphicon glyphicon-bitcoin"></i>{{ $ctrl.market.Last | scientificToDecimal }}
+                            </td>
+                            <td>
+                                <i class="glyphicon glyphicon-bitcoin"></i>{{ $ctrl.market.Bid | scientificToDecimal }}
+                            </td>
+                            <td>
+                                <i class="glyphicon glyphicon-bitcoin"></i>{{ $ctrl.market.Ask | scientificToDecimal }}
+                            </td>
+                            <td>
+                                <i class="glyphicon glyphicon-bitcoin"></i>{{ $ctrl.market.Volume | scientificToDecimal }}
+                            </td>
+                            <td>
+                                <i class="glyphicon glyphicon-bitcoin"></i>{{ $ctrl.market.High | scientificToDecimal }}
+                            </td>
+                            <td>
+                                <i class="glyphicon glyphicon-bitcoin"></i>{{ $ctrl.market.Low | scientificToDecimal }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                LAST
+                            </th>
+                            <th>
+                                BID
+                            </th>
+                            <th>
+                                ASK
+                            </th>
+                            <th>
+                                VOLUME
+                            </th>
+                            <th>
+                                24H HIGH
+                            </th>
+                            <th>
+                                24H LOW
+                            </th>
+                        </tr>                                                                          
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <table class="table">
+                        <tr>
+                            <td>
+                                {{ $ctrl.market.OpenBuyOrders }}
+                            </td>
+                            <td>
+                                {{ $ctrl.market.OpenSellOrders }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Open Buy Orders
+                            </th>
+                            <th>
+                                Open Sell Orders
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
