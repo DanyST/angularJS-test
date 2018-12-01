@@ -1,6 +1,6 @@
 'use strict';
 
-// Register `phoneList` component, along with its associated controller and template
+// Register `marketList` component, along with its associated controller and template
 angular.
     module('marketList').
     component('marketList', {

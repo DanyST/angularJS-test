@@ -1,4 +1,4 @@
 'use strict';
 
-// Define the `phoneList` module
+// Define the `marketList` module
 angular.module('marketList', []);

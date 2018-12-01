@@ -2,9 +2,8 @@
   "name": "MarketApp",
   "private": true,
   "version": "0.0.0",
-  "description": "A tutorial application for AngularJS",
+  "description": "",
   "repository": "https://github.com/angular/angular-phonecat",
-  "license": "MIT",
   "dependencies": {
     "angular": "1.7.x",
     "angular-route": "^1.7.5",

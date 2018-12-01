@@ -1,6 +1,6 @@
 'use strict';
 
-// Register `phoneList` component, along with its associated controller and template
+// Register `marketDetail` component, along with its associated controller and template
 angular.
     module('marketDetail').
     component('marketDetail', {
@@ -10,7 +10,6 @@ angular.
             var self = this;
             $http.get("https://bittrex.com/api/v1.1/public/getmarketsummary?market=" + this.marketName).then(function(response) {
                 self.market = response.data.result[0];
-                console.log(self.market);
             });
         }]
   });
