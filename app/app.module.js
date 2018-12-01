@@ -1,8 +1,9 @@
 'use strict';
 
-// Define the `phonecatApp` module
+// Define the `marketApp` module
 angular.module('marketApp', [
   'ngRoute',
+  'core',
   'marketList',
   'marketDetail',
   'navBar'

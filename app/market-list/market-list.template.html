@@ -79,7 +79,7 @@
                             {{ market.MarketName }}
                         </td>
                         <td>
-                            {{ market.High }}
+                            {{ market.High | scientificToDecimal }}
                         </td>
                         <td>
                             {{ market.Low | number: 7 }}
